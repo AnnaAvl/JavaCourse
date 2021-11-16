@@ -14,6 +14,7 @@ public class Main {
         RuleBasedCollator col = new RuleBasedCollator(rules);
         Map<String, Integer> mapWords = new TreeMap<>(col);
         for (String w : words) {
+            w = w.toLowerCase();
             if (!mapWords.containsKey((w))) {
                 mapWords.put(w, 1);
             } else {
